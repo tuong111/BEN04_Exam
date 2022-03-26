@@ -17,7 +17,6 @@ app.get('/', (req, res) =>{
 app.post('/search', (req, res)=> {
     const body = req.body
     const location = body.txtKeyword
-    console.log(location)
     axios.get(`${SearchURL}${location}`)
     .then(
         (response) => {
