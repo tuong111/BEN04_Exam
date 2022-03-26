@@ -7,4 +7,4 @@ app.get('/',(req,res) => {
     })
 })
 app.listen(PORT, 
-    (req, res) => {console.log(`Server listening on port ${PORT}`)}) // localhost:3000 127.0.0.1:3000
+    (req, res) => { console.log(`Server listening on port ${PORT}`) }) // localhost:3000 127.0.0.1:3000

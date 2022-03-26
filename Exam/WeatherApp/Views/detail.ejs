@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="/css/detail.css">
+</head>
+<body>
+    <h3><%=res_data.title%> , <%=res_data.parent.title%></h3>
+    <h4>Time : <%=res_data.time%></h4>
+    <div>
+        <h4>Weather :</h4>
+        <div class="weather_container">
+            <% res_data.consolidated_weather.forEach(function(data) { %>
+                <div class="weather_info">
+                    <p> Day : <%=data.applicable_date%></p>
+                    <p> <%=data.weather_state_name%></p>
+                    <p> Min temp : <%=data.min_temp%> °C</p>
+                    <p> Max temp : <%=data.max_temp%> °C</p>
+                </div>
+             <% }); %> 
+        </div>
+
+    </div>
+</body>
+</html>
